@@ -11,10 +11,28 @@ def post_post(request):
     return HttpResponse("<h1>POST</h1>")
 
 def post_get(request):
-    return HttpResponse("<h1>GET</h1>")
-
+    context = {
+    "title" : "Detail"
+    }
+    #return render(request, "index.html",{})
+    return render(request, "index.html", context)
 def post_put(request):
-    return HttpResponse("<h1>PUT</h1>")
+    #return HttpResponse("<h1>PUT</h1>")
+    # if request.user.is_authenticated():
+    #     context = {
+    #         "title" : "my user login"
+    #     }
+    # else:
+    #     context = {
+    #         "title" : "list"
+    #     }
+
+    context = {
+        "title" : "list"
+    }
+    
+    #return render(request, "index.html",{})
+    return render(request, "index.html", context)
 
 def post_delete(request):
     return HttpResponse("<h1>DELETE</h1>")
