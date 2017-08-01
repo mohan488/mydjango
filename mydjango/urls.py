@@ -20,5 +20,5 @@ from posts import views as Post_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^posts/', include("posts.urls")),
+    url(r'', include("posts.urls", namespace = "posts")),
 ]

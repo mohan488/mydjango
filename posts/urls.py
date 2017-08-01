@@ -6,7 +6,7 @@ from .views import (post_post, post_get, post_put,
 
 urlpatterns = [
     url(r'^post/$', post_post),
-    url(r'^get/$', post_get),
+    url(r'^(?P<id>\d+)/$', post_get, name = "detail"),
     url(r'^put/$', post_put),
     url(r'^delete/$', post_delete),
     url(r'^list/$', post_list),
